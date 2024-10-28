@@ -51,5 +51,7 @@ ENV JAVA_OPTS="${JAVA_OPTS} -XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1S
 
 EXPOSE 80
 
+ENV SPRING_PROFILES_ACTIVE=dev
+
 #ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar  app.jar "]
 ENTRYPOINT ["sh", "-c", "java -jar  app.jar "]
